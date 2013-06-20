@@ -114,7 +114,7 @@ __END__
 
 =head1 NAME
 
-File::Tail::Inotify2 - Perl extension for reading from continously updated files using Inotify.
+File::Tail::Inotify2 - Simple interface to tail a file using inotify.
 
 =head1 SYNOPSIS
 
@@ -130,7 +130,12 @@ File::Tail::Inotify2 - Perl extension for reading from continously updated files
 
 =head1 DESCRIPTION
 
-File::Tail::Inotify2 is yet another module to tail files. Even if the files are moved by logrotate tool, this module continue tailing new files.
+Yet another module to tail a file. Even if the file are renamed by
+logrotate(8), this module tail a new file created by logrotate(8).
+
+=head1 WARNINGS
+
+This module works on Linux. Other OS are not supported.
 
 =head1 METHOD
 
@@ -138,11 +143,11 @@ File::Tail::Inotify2 is yet another module to tail files. Even if the files are 
 
 =item $watcher = File::Tail::Inotify2->new( file => $filename, on_read => $cb->($read_line) )
 
-C<File::Tail::Inotify2-E<gt>new> returns File::Tail::Inotify2 object. If C<$filename> is modified, C<$cb-E<gt>($read_line)> is called per line.
+Returns a File::Tail::Inotify2 object. If C<$filename> is modified, C<$cb-E<gt>($read_line)> is called per line.
 
 =item $watcher->poll
 
-C<$watcher-E<gt>poll> start watching files and will never exit.
+Starts watching a file and will never exit.
 
 =back
 
@@ -164,4 +169,4 @@ at your option, any later version of Perl 5 you may have available.
 
 =cut
 
-# vim: set ts=4 sw=4 tw=78 expandtab
+# vim: set ts=4 sw=4 tw=78 expandtab:
