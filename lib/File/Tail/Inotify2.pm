@@ -8,7 +8,7 @@ use File::Basename qw(dirname);
 use Fcntl qw(SEEK_SET SEEK_END);
 use Carp ();
 
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 use constant {
     FMASK => IN_MODIFY | IN_MOVE_SELF,
