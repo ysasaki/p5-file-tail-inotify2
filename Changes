@@ -1,6 +1,7 @@
 Revision history for Perl extension File::Tail::Inotify2.
 
 {{$NEXT}}
+    - Add IN_MOVED_TO support like logrotate empty file create (AnthraxCompany #1)
 
 1.00 2013-06-20T09:50:02Z
     - Uses Minilla.
