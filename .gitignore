@@ -24,3 +24,6 @@ cover_db/
 MYMETA.*
 
 /File-Tail-Inotify2-*
+
+/Dockerfile
+/.idea/
