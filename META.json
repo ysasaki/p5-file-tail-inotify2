@@ -64,7 +64,7 @@
          "web" : "https://github.com/ysasaki/p5-file-tail-inotify2"
       }
    },
-   "version" : "1.01",
+   "version" : "1.02",
    "x_contributors" : [
       "AnthraxCompany <kawahara@firstserver.co.jp>",
       "ysasaki <aloelight@gmail.com>",
